@@ -1,4 +1,4 @@
-﻿Add-Type -AssemblyName 'System.Windows.Forms'
+Add-Type -AssemblyName 'System.Windows.Forms'
 Add-Type -Name Window -Namespace Console -MemberDefinition '
     [DllImport("Kernel32.dll")]
     public static extern IntPtr GetConsoleWindow();
@@ -72,16 +72,20 @@ $Form.FormBorderStyle = "None"
 $SystrayLauncher = New-Object System.Windows.Forms.NotifyIcon
 $SystrayIcon = [System.Drawing.Icon]::ExtractAssociatedIcon("C:\scripts\speed.ico")
 $SystrayLauncher.Icon = $SystrayIcon
-$SystrayLauncher.Text = "CPU Mode"
+$SystrayLauncher.Text = "Zephyrus Config"
 $SystrayLauncher.Visible = $true
 
 $ContextMenu = New-Object System.Windows.Forms.ContextMenu
-$Aggressive = New-MenuItem -Text "Aggressive" -MyScriptPath "C:\scripts\Aggressive.ps1"
-$Efficent = New-MenuItem -Text "Efficent" -MyScriptPath "C:\scripts\Efficent.ps1"
+$Agressive = New-MenuItem -Text "CPU Agressive" -MyScriptPath "C:\scripts\Agressive.ps1"
+$Efficent = New-MenuItem -Text "CPU Efficent" -MyScriptPath "C:\scripts\Efficent.ps1"
+$120hz = New-MenuItem -Text "Set 120Hz" -MyScriptPath "C:\scripts\120hz.ps1"
+$60hz = New-MenuItem -Text "Set 60Hz" -MyScriptPath "C:\scripts\60hz.ps1"
 $ExitLauncher = New-MenuItem -Text "Exit" -ExitOnly
 
-$ContextMenu.MenuItems.AddRange($Aggressive)
+$ContextMenu.MenuItems.AddRange($Agressive)
 $ContextMenu.MenuItems.AddRange($Efficent)
+$ContextMenu.MenuItems.AddRange($120hz)
+$ContextMenu.MenuItems.AddRange($60hz)
 $ContextMenu.MenuItems.AddRange($ExitLauncher)
 
 $SystrayLauncher.ContextMenu = $ContextMenu
