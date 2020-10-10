@@ -76,11 +76,11 @@ $SystrayLauncher.Text = "CPU Mode"
 $SystrayLauncher.Visible = $true
 
 $ContextMenu = New-Object System.Windows.Forms.ContextMenu
-$Agressive = New-MenuItem -Text "Agressive" -MyScriptPath "C:\scripts\Agressive.ps1"
+$Aggressive = New-MenuItem -Text "Aggressive" -MyScriptPath "C:\scripts\Aggressive.ps1"
 $Efficent = New-MenuItem -Text "Efficent" -MyScriptPath "C:\scripts\Efficent.ps1"
 $ExitLauncher = New-MenuItem -Text "Exit" -ExitOnly
 
-$ContextMenu.MenuItems.AddRange($Agressive)
+$ContextMenu.MenuItems.AddRange($Aggressive)
 $ContextMenu.MenuItems.AddRange($Efficent)
 $ContextMenu.MenuItems.AddRange($ExitLauncher)
 
