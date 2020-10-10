@@ -32,3 +32,8 @@ UPDATE 1: Cleaned up unused functions.
 
 
 If You have idea about additional options or functions I can add them.
+
+
+If there is security issue with powershell:
+Run powershell as admin and then Set-ExecutionPolicy Unrestricted
+Confim with A
