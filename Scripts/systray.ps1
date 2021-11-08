@@ -78,6 +78,7 @@ $SystrayLauncher.Visible = $true
 $ContextMenu = New-Object System.Windows.Forms.ContextMenu
 $Agressive = New-MenuItem -Text "CPU Agressive" -MyScriptPath "C:\scripts\Agressive.ps1"
 $Efficent = New-MenuItem -Text "CPU Efficent" -MyScriptPath "C:\scripts\Efficent.ps1"
+$144hz = New-MenuItem -Text "Set 144Hz" -MyScriptPath "C:\scripts\144hz.ps1"
 $120hz = New-MenuItem -Text "Set 120Hz" -MyScriptPath "C:\scripts\120hz.ps1"
 $60hz = New-MenuItem -Text "Set 60Hz" -MyScriptPath "C:\scripts\60hz.ps1"
 $ExitLauncher = New-MenuItem -Text "Exit" -ExitOnly
